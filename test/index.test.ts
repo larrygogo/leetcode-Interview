@@ -43,11 +43,6 @@ test('Chrome Error Test', () => {
         filename: 'http://192.168.31.8:8000/a.js',
       },
       {
-        line: 1,
-        column: 11,
-        filename: '<anonymous>',
-      },
-      {
         line: 22,
         column: 3,
         filename: 'http://192.168.31.8:8000/a.js',
@@ -81,11 +76,6 @@ test('Chrome Error Test', () => {
         line: 4,
         column: 3,
         filename: 'http://192.168.31.8:8000/a.js',
-      },
-      {
-        line: 1,
-        column: 11,
-        filename: '<anonymous>',
       },
       {
         line: 22,

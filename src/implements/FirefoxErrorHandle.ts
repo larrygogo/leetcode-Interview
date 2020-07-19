@@ -18,14 +18,16 @@ export class FirefoxErrorHandle extends ErrorHandle {
       line: number;
       column: number;
       filename: string;
-    }> = errorDetails.map(item => {
-      const arr = item.message.split(' ').reverse()[0].split('@').reverse();
-      return {
-        line: item.line,
-        column: item.column,
-        filename: arr[0],
-      };
-    });
+    }> = errorDetails
+      .map(item => {
+        const arr = item.message.split(' ').reverse()[0].split('@').reverse();
+        return {
+          line: item.line,
+          column: item.column,
+          filename: arr[0],
+        };
+      })
+      .filter(item => item.filename.indexOf('anonymous') === -1);
     const errorMessage: ErrorMessage = {
       message,
       stack,

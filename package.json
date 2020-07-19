@@ -28,6 +28,12 @@
     "test": "jest",
     "test-c": "jest --coverage"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run test",
+      "commit-msg": "commitlint -e $HUSKY_GIT_PARAMS"
+    }
+  },
   "keywords": [],
   "author": "",
   "license": "ISC"

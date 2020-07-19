@@ -24,7 +24,7 @@
   "scripts": {
     "build": "tsc",
     "lint": "eslint 'src/**/*.{js,ts,tsx}'",
-    "format": "eslint --fix 'src/**/*.{js,ts,tsx}'",
+    "format": "lint-staged",
     "test": "jest",
     "test-c": "jest --coverage"
   },

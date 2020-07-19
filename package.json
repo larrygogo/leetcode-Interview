@@ -28,12 +28,19 @@
     "test": "jest",
     "test-c": "jest --coverage"
   },
+  "keywords": [],
   "husky": {
     "hooks": {
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+      "pre-commit": "lint-staged"
     }
   },
-  "keywords": [],
+  "lint-staged": {
+    "*.{ts,tsx}": "eslint --fix",
+    "*.{js,jsx}": "eslint --fix",
+    "*.{md,html,json}": "prettier --write",
+    "*.{css,scss,less}": "prettier --write"
+  },
   "author": "larryzheng",
   "license": "ISC"
 }
